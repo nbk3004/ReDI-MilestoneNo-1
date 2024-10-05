@@ -33,7 +33,7 @@ Additional Guidelines:
 
 
 
-Example Structure:
+<!-- Example Structure:
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -84,6 +84,7 @@ Example Structure:
     </main>
   </body>
 </html>
+-->
 
 
 Submission:
