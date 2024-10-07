@@ -136,9 +136,10 @@ h1 {
 
 /* Carousel text */
 .offer {
-    font-size: 60px;
-    line-height: 50px;
+    font-size: 50px;
+    line-height: 60px;
     margin: 0;
+    padding: 3px;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -396,49 +397,145 @@ h1 {
 
 /* Media Queries for Responsive Design */
 
-/* Mobile (up to 600px) */
-@media (max-width: 600px) {
+/* Large screens (desktops) */
+@media screen and (min-width: 1201px) {
+
+    /* Styles for large screens */
+    .about-container {
+        flex-direction: row;
+    }
+
+    .text-container {
+        max-width: 30%;
+    }
+}
+
+/* Medium screens (laptops and small desktops) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .center {
+        font-size: 60px;
+    }
+
+    .text-container {
+        max-width: 40%;
+    }
+
+    .offer {
+        font-size: 50px;
+    }
+}
+
+/* Small screens (tablets) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main-nav {
+        padding: 30px;
+    }
+
+    .center {
+        font-size: 50px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .text-container {
+        max-width: 60%;
+    }
+
+    .offer {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+/* Extra small screens (mobile devices) */
+@media screen and (max-width: 768px) {
     .main-nav {
         flex-direction: column;
-        gap: 10px;
+        padding: 20px;
     }
 
-    .about {
+    .left,
+    .center,
+    .right {
+        margin-bottom: 10px;
+    }
+
+    .center {
+        font-size: 40px;
+    }
+
+    .about-container {
         flex-direction: column;
-        padding: 15px;
     }
 
-    .product-item {
-        flex: 1 1 100%;
-        /* Full width on mobile */
+    .text-container {
+        max-width: 100%;
     }
 
-    .btn a {
-        padding: 10px 20px;
-        font-size: 1rem;
+    .offer {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 0 5%;
     }
 
     .top-bar p {
-        font-size: 1.5rem;
+        font-size: 20px;
+    }
+
+    .btn a {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .image-box img:hover {
+        transform: scale(1.4);
     }
 }
 
-/* Tablet (up to 900px) */
-@media (max-width: 900px) {
-    .product-item {
-        flex: 1 1 calc(50% - 20px);
-        /* Two items per row */
+/* Extra extra small screens (small mobile devices) */
+@media screen and (max-width: 480px) {
+    .main-nav {
+        margin: 0;
+        border-radius: 0;
     }
 
-    .about {
-        flex-direction: column;
+    .center {
+        font-size: 30px;
     }
-}
 
-/* Desktop (large screens) */
-@media (min-width: 900px) {
-    .product-item {
-        flex: 1 1 calc(33.33% - 20px);
-        /* Three items per row */
+    .offer {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .offer-carousel {
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .top-bar {
+        margin: 0;
+    }
+
+    .top-bar p {
+        font-size: 16px;
+        margin: 5px 0 15px 0;
+    }
+
+    .btn a {
+        padding: 10px 15px;
+        font-size: 14px;
     }
 }
